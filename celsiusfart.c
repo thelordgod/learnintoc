@@ -4,7 +4,6 @@
 #define UPPER 300
 #define STEP 20
 
-
 //C=(5/9)(F-32)
 //int main() {
 //	float fahr, celsius;
