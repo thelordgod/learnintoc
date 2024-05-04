@@ -4,7 +4,7 @@
 
 // print a histogram of the lengths of words in its input (horizontal variant)
 int main() {
-	int c, i, nc, ws;
+	int c, i, j, nc, ws;
 
 	int dhist[MAXWORDLENGTH];
 	for (i = 0; i < MAXWORDLENGTH; ++i) {
@@ -26,6 +26,11 @@ int main() {
 		}
 	}
 
-	for (i = 0; i < MAXWORDLENGTH; ++i)
-		printf(" %d", dhist[i]);
+	for (i = 1; i < MAXWORDLENGTH; ++i) { // no point starting from 0 (there are better ways to avoid this buttfuck it
+		printf("word length: %d [", i);
+		for (j = 0; j < dhist[i]; ++j) {
+			putchar('=');
+		}
+		printf("]\n");
+	}
 }
