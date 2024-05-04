@@ -15,7 +15,7 @@ int main() {
 	while ((c = getchar()) != EOF) {
 		if (c == ' ' || c == '\n' || c == '\t') {
 			++ws;
-			if (ws < 2){
+			if (ws == 1){
 				++dhist[nc];
 				nc = 0;
 			}
