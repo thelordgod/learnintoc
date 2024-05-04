@@ -1,7 +1,6 @@
 #include<stdio.h>
 
-
-// program that prints its input one word per line
+// print a histogram of the lengths of words in its input (horizontal variant)
 int main() {
 	int c, ws;
 
@@ -13,7 +12,7 @@ int main() {
 				putchar('\n');
 		}
 		else {
-			putchar(c);
+			putchar('=');
 			ws = 0;
 		}
 	}
