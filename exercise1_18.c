@@ -8,16 +8,21 @@
 int main() {
 	int c, i, j;
 	int ll[MAXLINE]; // line lengths
+	int qlin; // qualifying line quantity
 	char buf[MAXLINE]; // current line buffer
 	char printbuf[MAXLINES][MAXLINE]; // total line buffer
 
-	max = len = qlin = 0;
+	len = qlin = 0;
 	while ((c = getchar()) != EOF) {
 		if (c != '\n') {
 			buf[len] = c;
+			++len;
 		}
-	else if (c == '\n' && len <= PRINTLENGTH)
+		else if (c == '\n') {
 			len = 0;
+		}
+		else {
+		}
 	}
 	for (i = 0; i < qlin; ++i) {
 		for (j = 0; j < ll[i]; ++j)
