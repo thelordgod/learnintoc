@@ -31,7 +31,7 @@ int main() {
 						ll[qlin] = len;
 						lwh = FALSE;
 					}
-					else if (buf[i] == ' ' || buf[i] == '.')
+					else if (buf[i] == ' ' || buf[i] == '\t')
 						--len;
 					else
 						lwh = TRUE;
