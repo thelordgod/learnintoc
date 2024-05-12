@@ -23,8 +23,7 @@ int main() {
 		}
 		else {
 			if (len > 0) {
-				for (i = len - 1; i > 0; --i) {
-					printf("%d", len);
+				for (i = len - 1; i >= 0; --i) {
 					if (lwh == TRUE) {
 						for (j = 0; j < len; ++j) {
 							printbuf[qlin][j] = buf[j];
@@ -32,16 +31,14 @@ int main() {
 						ll[qlin] = len;
 						lwh = FALSE;
 					}
-					if (lwh == FALSE && (buf[len] == ' ' || buf[len] == '\t')) {
+					else if (buf[i] == ' ' || buf[i] == '.')
 						--len;
-						printf("%d", len);
-					}
-					else {
+					else
 						lwh = TRUE;
-					}
 				}
 				len = 0;
 				++qlin;
+				lwh = FALSE;
 			}
 		}
 	}
